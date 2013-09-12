@@ -29,7 +29,6 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 gem 'angular-rails'
-# gem 'rails-i18n', '~> 4.0.0.pre'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -40,10 +39,10 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
