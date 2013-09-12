@@ -1,0 +1,2 @@
+class RodoviasController < ApplicationController
+end
