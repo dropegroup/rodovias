@@ -28,7 +28,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
-gem 'rails-i18n', '~> 4.0.0.pre'
+gem 'angular-rails'
+# gem 'rails-i18n', '~> 4.0.0.pre'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
