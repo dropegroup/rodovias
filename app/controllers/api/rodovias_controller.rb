@@ -13,6 +13,7 @@ class Api::RodoviasController < ApplicationController
   private
 
   def populate_rodovias
-    @rodovias = [ { sigla: 'BR116' }, { sigla: 'BR101' } ]
+    # @rodovias = [ { sigla: 'BR116' }, { sigla: 'BR101' } ]
+    @rodovias = Services::Rodovia.all.map(&:attributes)
   end
 end
