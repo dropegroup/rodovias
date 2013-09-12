@@ -1,2 +1,10 @@
-<h1>Rodovias#index</h1>
-<p>Find me in app/views/rodovias/index.html.erb</p>
+<div ng-controller="RodoviasCtrl">
+  <h1>Sigla: {{sigla}}</h1> 
+  <div id="rodovia-list-container">
+    <ul>
+      <li ng-repeat="rodovia in rodovias">
+        <h3>{{rodovia.sigla}}</h3>
+      </li>
+    </ul>
+  </div>
+</div>
