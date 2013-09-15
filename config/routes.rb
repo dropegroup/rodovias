@@ -3,6 +3,7 @@ Rodovias::Application.routes.draw do
   # first created -> highest priority.
 
   resources :rodovias
+  resources :rodovias_ember
 
   namespace :api do
     resources :rodovias

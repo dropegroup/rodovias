@@ -1,0 +1,2 @@
+module RodoviasEmberHelper
+end

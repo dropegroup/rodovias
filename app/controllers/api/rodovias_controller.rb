@@ -15,5 +15,9 @@ class Api::RodoviasController < ApplicationController
   def populate_rodovias
     # @rodovias = [ { sigla: 'BR116' }, { sigla: 'BR101' } ]
     @rodovias = Services::Rodovia.all.map(&:attributes)
+    @rodovias.each_with_index do |attr, index|
+      attr['id'] = index
+    end
+    @rodovias
   end
 end
