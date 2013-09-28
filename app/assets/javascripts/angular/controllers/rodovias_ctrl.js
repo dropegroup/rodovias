@@ -1,3 +1,4 @@
-App.controller('RodoviasCtrl', ['$scope', 'Rodovia', function($scope, Rodovia) {
+App.controller('RodoviasCtrl', ['$scope', 'Rodovia', 'Ranking', function($scope, Rodovia, Ranking) {
   $scope.rodovias = Rodovia.query();
+  $scope.rankings = Ranking.query();
 }]);

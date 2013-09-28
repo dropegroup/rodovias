@@ -6,9 +6,18 @@
       </li>
     </ul>
   </div>
+
+  <div>
+    <div ng-repeat="ranking in rankings">
+      Rodovia: {{ranking.rodovia}}
+      Densidade: {{ranking.densidade}}
+    </div>
+  </div>
 </div>
 
-<pre>
+<% if ENV['VCAP_SERVICES'].present? -%>
+ <pre>
   VCAP_SERVICES:
-  <%= ENV['VCAP_SERVICES'].html_safe %>
+  <%=raw ENV['VCAP_SERVICES'] %>
 </pre>
+<% end -%>
