@@ -23,3 +23,12 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+appfog:
+  adapter: mysql2
+  username: uYJqJXYnFg69g
+  password: pnzv3l6ioFBWs
+  database: d7a77180431d8462ba21b1931d3a1c746
+  port: 10000
+  host: localhost
+
