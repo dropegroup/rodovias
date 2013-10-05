@@ -9,25 +9,38 @@
   </div>
 
   <div>
-    <h3>GET /rankings</h3>
-    <select id="" name="" ng-model="ordem">
-    	<option value="rodovia">Rodovia</option>
-    	<option value="densidade">Densidade</option>
-    </select>
-    <div class="row-fluid">
-      <div class="span4">Rodovia</div>
-      <div class="span8">Densidade</div>
-      <div ng-repeat="ranking in rankings | orderBy:ordem">
-        <div class="span4">{{ranking.rodovia}}</div>
-        <div class="span8">
-          <div class="progress progress-warning">
-            <div style="width:{{ranking.densidade / max_densidade * 100}}%" class="bar"></div>
+    <h3>GET /rankings<br /><small>Rankings</small></h3>
+
+    <div class="row">
+
+      <div class="small-3 large-3 columns">
+        <select id="" name="" ng-model="ordem">
+          <option value="rodovia">Rodovia</option>
+          <option value="densidade">Densidade</option>
+        </select>
+      </div>
+
+      <div class="small-9 large-9 columns">
+        <div class="small-3 large-3 columns">
+          Rodovia
+        </div>
+        <div class="small-9 large-9 columns">
+          Densidade
+        </div>
+        
+        <div ng-repeat="ranking in rankings | orderBy:ordem">
+          <div class="small-3 large-3 columns">{{ranking.rodovia}}</div>
+          <div class="small-9 large-9 columns">
+            <div class="progress">
+              <div class="meter" style="width:{{ranking.densidade / max_densidade * 100}}%"></div>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
+
   </div>
-  max_densidade: {{max_densidade}}
 </div>
 
 
