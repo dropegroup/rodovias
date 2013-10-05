@@ -25,7 +25,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
 gem 'angular-rails'
 gem 'her'
 

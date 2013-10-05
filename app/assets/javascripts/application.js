@@ -13,7 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require angular
+//= require angular.min
+//= require angle-up
 //= require angular-resource
 //= require app
 //= require_tree .
