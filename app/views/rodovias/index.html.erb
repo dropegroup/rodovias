@@ -1,5 +1,6 @@
 <div ng-controller="RodoviasCtrl">
   <div id="rodovia-list-container">
+    <h3>GET /rodovias</h3>
     <ul>
       <li ng-repeat="rodovia in rodovias">
         <h4>Code: {{rodovia.code}}   Type: {{rodovia.type}}</h4>
@@ -8,12 +9,28 @@
   </div>
 
   <div>
-    <div ng-repeat="ranking in rankings">
-      Rodovia: {{ranking.rodovia}}
-      Densidade: {{ranking.densidade}}
+    <h3>GET /rankings</h3>
+    <select id="" name="" ng-model="ordem">
+    	<option value="rodovia">Rodovia</option>
+    	<option value="densidade">Densidade</option>
+    </select>
+    <div class="row-fluid">
+      <div class="span4">Rodovia</div>
+      <div class="span8">Densidade</div>
+      <div ng-repeat="ranking in rankings | orderBy:ordem">
+        <div class="span4">{{ranking.rodovia}}</div>
+        <div class="span8">
+          <div class="progress progress-warning">
+            <div style="width:{{ranking.densidade / max_densidade * 100}}%" class="bar"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  max_densidade: {{max_densidade}}
 </div>
+
+
 
 <% if ENV['VCAP_SERVICES'].present? -%>
  <pre>
