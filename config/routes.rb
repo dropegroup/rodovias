@@ -3,10 +3,11 @@ Rodovias::Application.routes.draw do
   # first created -> highest priority.
 
   resources :rodovias
-  resources :rodovias_ember
 
   namespace :api do
-    resources :rodovias
+    resources :rodovias do
+      get 'ranking', :on => :collection
+    end
     resources :rankings
   end
 

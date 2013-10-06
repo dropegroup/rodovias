@@ -1,4 +1,4 @@
 App.factory('Ranking', ['$resource', function($resource) {
-  return $resource('/api/rankings/:id', {id: '@id'});
+  return $resource('/api/rodovias/ranking/:id', {id:'@id'});
 }]);
 

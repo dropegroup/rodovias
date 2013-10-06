@@ -21,21 +21,24 @@
       </div>
 
       <div class="small-9 large-9 columns">
-        <div class="small-3 large-3 columns">
-          Rodovia
-        </div>
-        <div class="small-9 large-9 columns">
-          Densidade
-        </div>
-        
-        <div ng-repeat="ranking in rankings | orderBy:ordem">
-          <div class="small-3 large-3 columns">{{ranking.rodovia}}</div>
-          <div class="small-9 large-9 columns">
-            <div class="progress">
-              <div class="meter" style="width:{{ranking.densidade / max_densidade * 100}}%"></div>
-            </div>
-          </div>
-        </div>
+        <table width="100%">
+        	<thead>
+        		<tr>
+        			<th>Rodovia</th>
+        			<th>Densidade</th>
+        		</tr>
+        	</thead>
+            <tbody ng-repeat="ranking in rankings | orderBy:ordem">
+              <tr>
+                <td width="20%">BR-{{ranking.group}}</td>
+                <td>
+                  <div class="progress">
+                    <div class="meter" style="width:{{ranking.densidade / max_densidade * 100}}%"></div>
+                  </div>
+                </td>
+              </tr>
+          </tbody>
+        </table>
 
       </div>
     </div>

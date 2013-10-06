@@ -1,6 +1,6 @@
 class Api::RodoviasController < ApplicationController
   respond_to :json
-  before_filter :populate_rodovias, on: [ 'index', 'show' ]
+  before_filter :populate_rodovias, only: [ 'index', 'show' ]
 
   def index
     render :text => @rodovias.to_json
@@ -8,6 +8,10 @@ class Api::RodoviasController < ApplicationController
 
   def show
     render :text => @rodovias[params[:id].to_i - 1].to_json
+  end
+
+  def ranking
+    render :text => Services::Rodovia.ranking.map(&:attributes).to_json
   end
 
   private
