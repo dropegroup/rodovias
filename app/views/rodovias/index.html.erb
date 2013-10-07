@@ -9,18 +9,23 @@
   </div>
 
   <div>
-    <h3>GET /rankings<br /><small>Rankings</small></h3>
+    <h3>Ranking de Rodovias<br /><small>Piores rodovias no ranking de acidentes por km</small></h3>
 
     <div class="row">
 
+      <div class="small-1 large-1 columns">
+        Ordem:
+      </div>
       <div class="small-3 large-3 columns">
         <select id="" name="" ng-model="ordem">
           <option value="rodovia">Rodovia</option>
           <option value="-densidade">Densidade</option>
         </select>
       </div>
+      <div class="clear"></div>
+      <br/>
 
-      <div class="small-9 large-9 columns">
+      <div class="small-10 large-10 columns">
         <table width="100%">
         	<thead>
         		<tr>
@@ -28,7 +33,7 @@
         			<th>Densidade</th>
         		</tr>
         	</thead>
-            <tbody ng-repeat="ranking in rankings | orderBy:ordem">
+            <tbody ng-repeat="ranking in rankings | orderBy:ordem | limitTo:10">
               <tr>
                 <td width="20%">BR-{{ranking.group}}</td>
                 <td>
@@ -42,16 +47,10 @@
         </table>
 
       </div>
+      <div class="clear"></div>
+
     </div>
 
   </div>
 </div>
 
-
-
-<% if ENV['VCAP_SERVICES'].present? -%>
- <pre>
-  VCAP_SERVICES:
-  <%=raw ENV['VCAP_SERVICES'] %>
-</pre>
-<% end -%>
