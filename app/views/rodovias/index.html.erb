@@ -16,7 +16,7 @@
       <div class="small-3 large-3 columns">
         <select id="" name="" ng-model="ordem">
           <option value="rodovia">Rodovia</option>
-          <option value="densidade">Densidade</option>
+          <option value="-densidade">Densidade</option>
         </select>
       </div>
 
@@ -32,9 +32,10 @@
               <tr>
                 <td width="20%">BR-{{ranking.group}}</td>
                 <td>
-                  <div class="progress">
+                  <div class="progress" style="width:90%; float:left; margin-right:10px">
                     <div class="meter" style="width:{{ranking.densidade / max_densidade * 100}}%"></div>
                   </div>
+                  {{ranking.densidade}}
                 </td>
               </tr>
           </tbody>
