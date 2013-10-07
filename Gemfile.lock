@@ -79,10 +79,8 @@ GEM
     mime-types (1.25)
     multi_json (1.8.0)
     multipart-post (1.2.0)
-    pg (0.17.0)
+    mysql2 (0.3.13)
     polyglot (0.3.3)
-    postgres (0.8.1)
-      pg (~> 0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -150,7 +148,7 @@ DEPENDENCIES
   debugger
   her
   jquery-rails
-  postgres
+  mysql2
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   sqlite3
