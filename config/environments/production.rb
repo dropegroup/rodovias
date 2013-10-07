@@ -64,4 +64,7 @@ Rodovias::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  
+  # https://shellycloud.com/blog/2013/10/how-to-integrate-angularjs-with-rails-4
+  config.assets.js_compressor = Uglifier.new(mangle: false)
 end
