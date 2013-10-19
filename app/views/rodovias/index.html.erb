@@ -35,7 +35,9 @@
         	</thead>
             <tbody ng-repeat="ranking in rankings | orderBy:ordem | limitTo:10">
               <tr>
-                <td width="20%">BR-{{ranking.group}}</td>
+                <td width="20%">
+                  BR-{{ranking.group}}
+                </td>
                 <td>
                   <div class="progress" style="width:90%; float:left; margin-right:10px">
                     <div class="meter" style="width:{{ranking.densidade / max_densidade * 100}}%"></div>
@@ -48,6 +50,7 @@
 
       </div>
       <div class="clear"></div>
+
 
     </div>
 

@@ -16,8 +16,8 @@
   	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
   	<%= stylesheet_link_tag    "application" %>
-  	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
+    <%= yield :head %>
   </head>
 
   <body>
@@ -93,6 +93,8 @@
     </div> 
     </footer>
 
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= javascript_include_tag "https://www.google.com/jsapi" %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

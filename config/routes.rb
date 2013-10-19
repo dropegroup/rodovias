@@ -2,7 +2,9 @@ Rodovias::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  resources :rodovias
+  resources :rodovias do
+    get 'chart', :on => :collection
+  end
 
   namespace :api do
     resources :rodovias do
